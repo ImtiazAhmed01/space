@@ -64,17 +64,13 @@ export default function CreatorProfile() {
               </p>
             </div>
           </div>
-
-          {/* Bio Description (Exact Text from Figma Screenshot 1) */}
           <div className="font-satoshi text-white/85 text-sm sm:text-base leading-[1.6] max-w-4xl mt-7 space-y-3 font-normal">
             {creatorProfile.bio.map((para, i) => (
               <p key={i}>{para}</p>
             ))}
           </div>
 
-          {/* Badges & Follow Button Row */}
           <div className="flex flex-wrap items-center justify-between gap-4 mt-8 pt-2">
-            {/* Stats Badges: 3 Products | 12 Followers */}
             <div className="flex items-center gap-3">
               <div className="px-5 py-2.5 rounded-full bg-white text-[#1D1E20] font-satoshi text-sm font-medium shadow-sm flex items-center">
                 <span className="text-[#003BE2] font-poppins font-semibold mr-1.5 text-base">{creatorProfile.stats.products}</span>
@@ -88,13 +84,13 @@ export default function CreatorProfile() {
               </div>
             </div>
 
-            {/* Follow Button */}
+
             <button
               type="button"
               onClick={() => setIsFollowing(!isFollowing)}
               className={`px-8 sm:px-10 py-2.5 sm:py-3 rounded-full font-satoshi font-medium text-sm sm:text-base transition-all shadow-sm active:scale-95 cursor-pointer leading-[1.2] ${isFollowing
-                  ? 'bg-white text-[#003BE2] border border-white'
-                  : 'bg-[#CBFC01] hover:bg-[#b8e400] text-[#1D1E20]'
+                ? 'bg-white text-[#003BE2] border border-white'
+                : 'bg-[#CBFC01] hover:bg-[#b8e400] text-[#1D1E20]'
                 }`}
             >
               {isFollowing ? 'Following' : 'Follow'}
@@ -115,8 +111,8 @@ export default function CreatorProfile() {
                   setSelectedCategory('all');
                 }}
                 className={`flex items-center gap-2 px-5 py-2.5 rounded-full border text-sm font-medium transition-colors cursor-pointer ${selectedLevel !== 'all' || selectedCategory !== 'all'
-                    ? 'border-[#003BE2] bg-[#003BE2]/5 text-[#003BE2]'
-                    : 'border-[#CED0D3] bg-white text-[#1D1E20] hover:border-[#1D1E20]'
+                  ? 'border-[#003BE2] bg-[#003BE2]/5 text-[#003BE2]'
+                  : 'border-[#CED0D3] bg-white text-[#1D1E20] hover:border-[#1D1E20]'
                   }`}
               >
                 <svg
@@ -143,8 +139,8 @@ export default function CreatorProfile() {
                     setSortDropdownOpen(false);
                   }}
                   className={`flex items-center gap-2 px-5 py-2.5 rounded-full border text-sm font-medium transition-colors cursor-pointer ${selectedLevel !== 'all'
-                      ? 'border-[#003BE2] bg-[#003BE2]/5 text-[#003BE2]'
-                      : 'border-[#CED0D3] bg-white text-[#1D1E20] hover:border-[#1D1E20]'
+                    ? 'border-[#003BE2] bg-[#003BE2]/5 text-[#003BE2]'
+                    : 'border-[#CED0D3] bg-white text-[#1D1E20] hover:border-[#1D1E20]'
                     }`}
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 16 16">
@@ -165,8 +161,8 @@ export default function CreatorProfile() {
                           setLevelDropdownOpen(false);
                         }}
                         className={`w-full text-left px-4 py-2 text-sm transition-colors ${selectedLevel === lvl
-                            ? 'bg-[#CBFC01]/30 font-semibold text-[#1D1E20]'
-                            : 'text-[#1D1E20] hover:bg-[#F5F5F6]'
+                          ? 'bg-[#CBFC01]/30 font-semibold text-[#1D1E20]'
+                          : 'text-[#1D1E20] hover:bg-[#F5F5F6]'
                           }`}
                       >
                         {lvl === 'all' ? 'All Levels' : lvl}
@@ -184,8 +180,8 @@ export default function CreatorProfile() {
                     setSortDropdownOpen(false);
                   }}
                   className={`flex items-center gap-2 px-5 py-2.5 rounded-full border text-sm font-medium transition-colors cursor-pointer ${selectedCategory !== 'all'
-                      ? 'border-[#003BE2] bg-[#003BE2]/5 text-[#003BE2]'
-                      : 'border-[#CED0D3] bg-white text-[#1D1E20] hover:border-[#1D1E20]'
+                    ? 'border-[#003BE2] bg-[#003BE2]/5 text-[#003BE2]'
+                    : 'border-[#CED0D3] bg-white text-[#1D1E20] hover:border-[#1D1E20]'
                     }`}
                 >
                   <svg
@@ -214,8 +210,8 @@ export default function CreatorProfile() {
                           setCategoryDropdownOpen(false);
                         }}
                         className={`w-full text-left px-4 py-2 text-sm transition-colors ${selectedCategory === cat
-                            ? 'bg-[#CBFC01]/30 font-semibold text-[#1D1E20]'
-                            : 'text-[#1D1E20] hover:bg-[#F5F5F6]'
+                          ? 'bg-[#CBFC01]/30 font-semibold text-[#1D1E20]'
+                          : 'text-[#1D1E20] hover:bg-[#F5F5F6]'
                           }`}
                       >
                         {cat === 'all' ? 'All Categories' : cat}
@@ -264,8 +260,8 @@ export default function CreatorProfile() {
                         setSortDropdownOpen(false);
                       }}
                       className={`w-full text-left px-4 py-2 text-sm transition-colors ${sortOption === opt.id
-                          ? 'bg-[#CBFC01]/30 font-semibold text-[#1D1E20]'
-                          : 'text-[#1D1E20] hover:bg-[#F5F5F6]'
+                        ? 'bg-[#CBFC01]/30 font-semibold text-[#1D1E20]'
+                        : 'text-[#1D1E20] hover:bg-[#F5F5F6]'
                         }`}
                     >
                       {opt.label}
